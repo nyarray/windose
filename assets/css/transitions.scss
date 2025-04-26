@@ -1,0 +1,30 @@
+// .page-enter-active,
+// .page-leave-active {
+//   transition: opacity 0.25s ease, transform .25s ease;
+// }
+// .page-enter,
+// .page-leave-active {
+//   opacity: 0;
+//   // transform: translateX(-2rem);
+// }
+
+.page-enter-active,
+.page-leave-active {
+    // transition: filter 0.2s ease-out;
+}
+
+.page-enter-from,
+.page-leave-to {
+    // filter: blur(16px);
+}
+
+.v-enter-active,
+.v-leave-active {
+  transition: .5s ease-out;
+}
+
+.v-enter-from,
+.v-leave-to {
+  // filter: blur(16px);
+  opacity: 0;
+}

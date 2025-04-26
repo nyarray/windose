@@ -1,0 +1,55 @@
+
+.hurt-border-inset,
+.hurt-border-outset {
+    border: var(--border-width) solid;
+}
+
+.hurt-border-inset {
+    border-left-color: #7953d8;
+    border-top-color: #7953d8;
+    border-right-color: white;
+    border-bottom-color: white;
+    cursor: pointer;
+
+    &:active, &.active, &.hover:hover {
+        border-left-color: white;
+        border-top-color: white;
+        border-right-color: #7953d8;
+        border-bottom-color: #7953d8;
+    }
+}
+
+.hurt-border-outset {
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7953d8;
+    border-bottom-color: #7953d8;
+    cursor: pointer;
+
+    &:active, &.active, &.hover:hover {
+        border-left-color: #7953d8;
+        border-top-color: #7953d8;
+        border-right-color: white;
+        border-bottom-color: white;
+    }
+}
+
+.hurt-divider {
+    width: 4px;
+    margin: 0 8px;
+    border: var(--border-width) solid;
+    border-left-color: white;
+    border-top-color: white;
+    border-right-color: #7953d8;
+    border-bottom-color: #7953d8;
+}
+
+.hurt-border {
+    border: var(--border-width) solid #7953d8;
+
+}
+
+@mixin border-outset {
+    border-top: var(--border-width) outset white;
+
+}
