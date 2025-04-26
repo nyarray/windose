@@ -23,6 +23,7 @@
         "katex": "^0.16.11",
         "marked": "^14.1.0",
         "marked-highlight": "^2.1.4",
+        "pinia": "^3.0.2",
         "ress": "^5.0.2",
         "vue": "latest",
         "vue3-colorpicker": "^2.3.0"
