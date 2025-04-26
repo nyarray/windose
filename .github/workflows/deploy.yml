@@ -37,6 +37,6 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "windose" # == https://dash.deno.com/projects/<PROJECT_NAME>
+          project: "nyarray-windose-50" # == https://dash.deno.com/projects/<PROJECT_NAME>
           entrypoint: "server/index.ts"
           root: ".output"
