@@ -8,7 +8,7 @@
     .about.card
         .blockquote
             s-icon(name='quote').quote-left
-            .quote-content ����は�を�む
+            .quote-content 夢の中に
             s-icon(name='quote').quote-right
         .description(v-for='(part, i) in store.about', :key='i')
             hr
