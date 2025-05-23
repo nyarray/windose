@@ -146,10 +146,15 @@ export const useMainStore = defineStore('main', {
         async getProjects() {
             if (this.projects?.length) return
             const projects = (await Promise.all([useApi.fetchPage('projects'), useApi.fetchPage('websites')])).map(item => item[0])
-            this.projects = projects.map((item) => {
-                const name = item.title.toLowerCase()
-                return { name, items: formatPage(item, item.title.toLowerCase()) }
+            const items: Projects = [];
+            projects.forEach((item) => {
+                if (item && item.title) {
+
+                    const name = item.title.toLowerCase()
+                    items.push({ name, items: formatPage(item, item.title.toLowerCase()) })
+                }
             })
+            this.projects = items
         },
         /**
          *
