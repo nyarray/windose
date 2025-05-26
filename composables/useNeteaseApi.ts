@@ -26,11 +26,13 @@ const rsaEncrypt = (secKey: string, pubKey: string, modulus: string) => {
 }
 
 const aesEncrypt = (text?: string, nonce?: string) => {
-    const iv = CryptoJS.lib.WordArray(Buffer.alloc('0102030405060708'))
-    const ivParameterSpec = Buffer.alloc(16, iv);
-    const key = ''
-    // CryptoJS.AES.encrypt(ivParameterSpec, '')
-    CryptoJS.AES.encrypt('0102030405060708', key, { mode: CryptoJS.mode.CBC, iv: iv })
+    // const iv = CryptoJS.lib.WordArray(Buffer.alloc('0102030405060708'))
+    // const ivParameterSpec = Buffer.alloc(16, iv);
+    // const key = ''
+    // CryptoJS.AES.encrypt('0102030405060708', key, { mode: CryptoJS.mode.CBC, iv: iv })
+
+
+
     // CryptoJS.AES.encrypt(ivParameterSpec, '')
     //  const secretKeySpec = new SecretKeySpec(key.getBytes(StandardCharsets.UTF_8), "AES");
     //     Cipher cipher = Cipher.getInstance("AES/CBC/PKCS5Padding");
