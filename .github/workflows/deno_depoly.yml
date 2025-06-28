@@ -51,4 +51,4 @@ jobs:
         with:
           project: windose
           entrypoint: server/index.ts
-          root: .output
+          root: .output 
