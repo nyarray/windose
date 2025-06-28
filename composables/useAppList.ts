@@ -137,6 +137,22 @@ export const useDesktopApps: DesktopApp[] = [{
         return createWindow(this, MugPainting)
     },
     data: undefined
+},{
+    icon: '/images/icon/icon_desktop_2ch.png',
+    title: 'Mug',
+    key: 'mug',
+    // click: function (): void {
+    //     const router = useRouter()
+    //     router.push('/blog')
+    // },
+    click: function (e): NWindow {
+
+        // return { id: Symbol(), view: PlayerView, data: this }
+        // return { id: Symbol(), view: BlogView, data: this }
+        
+        return createWindow(this, MugPainting)
+    },
+    data: undefined
 },
 ]
 // const icons = [
