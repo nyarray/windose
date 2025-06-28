@@ -37,38 +37,8 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "nyarray" # == https://dash.deno.com/projects/<PROJECT_NAME>
+          project: "nyarray"
           entrypoint: "server/index.ts"
           root: ".output"
           
           
-# name: Deploy
-
-# on:
-#   push:
-#     branches:
-#       - main
-
-# jobs:
-#   build:
-#     runs-on: ubuntu-latest
-
-#     steps:
-#       - uses: actions/checkout@v4
-
-#       - uses: actions/setup-node@v3
-#         with:
-#           node-version: 18
-#           cache: 'pnpm'
-
-#       - name: Install pnpm
-#         run: npm install -g pnpm
-
-#       - name: Install dependencies
-#         run: pnpm install --no-frozen-lockfile
-
-#       - name: Build project
-#         run: pnpm build
-
-#       - name: Deploy to your server or do something else
-#         run: echo "Deploy done."
