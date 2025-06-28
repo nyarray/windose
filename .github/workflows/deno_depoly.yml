@@ -49,6 +49,6 @@ jobs:
           NITRO_PRESET: deno-deploy
       - uses: denoland/deployctl@v1
         with:
-          project: windose
+          project: nyarray
           entrypoint: server/index.ts
           root: .output 
