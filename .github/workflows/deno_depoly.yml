@@ -16,8 +16,8 @@ jobs:
         with:
           node-version: 18
           cache: pnpm
-      - run: yarn
-      - run: yarn build
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm build
         env:
           NITRO_PRESET: deno_deploy
       - name: Deploy to Deno Deploy
