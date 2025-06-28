@@ -35,7 +35,7 @@ jobs:
         run: "NITRO_PRESET=deno-deploy npm run build"
 
       - name: Upload to Deno Deploy
-        uses: denoland/deployctl@v2
+        uses: denoland/deployctl@v1
         with:
           project: "nyarray"
           entrypoint: "server/index.ts"
