@@ -137,7 +137,7 @@ export const useDesktopApps: DesktopApp[] = [{
         return createWindow(this, MugPainting)
     },
     data: undefined
-},{
+}/*,{
     icon: '/images/icon/icon_desktop_2ch.png',
     title: 'Mug',
     key: 'mug',
@@ -153,7 +153,7 @@ export const useDesktopApps: DesktopApp[] = [{
         return createWindow(this, MugPainting)
     },
     data: undefined
-},
+},*/
 ]
 // const icons = [
 //     {
