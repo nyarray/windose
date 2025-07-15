@@ -27,7 +27,7 @@
 #           entrypoint: server/index.ts
 #           root: .output
 
-name: Deploy to Deno
+name: Build
 on:
   push:
     branches: [main]
