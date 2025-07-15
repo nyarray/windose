@@ -2,6 +2,15 @@
 const musicApi = "https://netease-cloud-music-api-x8ik.vercel.app";
 const musicListId = "7490559834";
 export default {
+    nitro: {
+        routeRules: {
+            "/static/**.woff2": {
+                headers: {
+                    "Content-Type": "font/woff2",
+                },
+            },
+        },
+    },
     // 應用程式配置
     app: {
         // 網站標題，可選
