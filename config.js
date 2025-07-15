@@ -4,7 +4,7 @@ const musicListId = "7490559834";
 export default {
     nitro: {
         routeRules: {
-            "/static/**.woff2": {
+            "/static/fonts/**.woff2": {
                 headers: {
                     "Content-Type": "font/woff2",
                 },
