@@ -2,7 +2,16 @@
 const musicApi = "https://netease-cloud-music-api-x8ik.vercel.app";
 const musicListId = "7490559834";
 export default {
+    
     nitro: {
+         publicAssets: [
+    { baseURL: '/static', dir: 'public/static' }
+  ],
+//   routeRules: {
+//     '/fonts/**': {
+//       headers: { 'Content-Type': 'font/woff2' }
+//     }
+//   }
         routeRules: {
             "/static/fonts/**.woff2": {
                 headers: {
