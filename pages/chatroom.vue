@@ -13,12 +13,17 @@
         .chatbox-input-wrapper
             input(type="text" placeholder="Type your message..." @keydown.enter="send" v-model="store.message")
         .flex
+            button.emoji-add Emoji
+                .emoji-list.hurt-border-inset
+                    .emoji-item(v-for="emoji in emojiList" @click="addEmoji(emoji)") {{ emoji }}
             button(@click="send") Send
             button(@click="reconnent") Reconnect
             button(@click="clear") Clear
 </template>
 
 <script setup lang="ts">
+import useEmoji from '~/composables/useEmoji'
+
 definePageMeta({
     layout: 'blank'
 })
@@ -36,7 +41,7 @@ const store = reactive({
     message: "",
     messages: <ChatMessage[]>[],
 });
-
+const emojiList = useEmoji
 function scroll() {
     nextTick(() => {
         const el = document.querySelector(".message-flow");
@@ -138,7 +143,9 @@ const send = () => {
     }
     store.message = "";
 };
-
+const addEmoji = (emoji: string) => {
+    store.message += emoji
+}
 onMounted(() => {
 
     if (import.meta.client) {
@@ -222,6 +229,31 @@ button {
 
     &:active {
         background-color: grey;
+    }
+}
+.emoji-add {
+    position: relative;
+    &:hover {
+        .emoji-list {
+            display: block;
+        }
+    }
+}
+.emoji-list {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    right: 0;
+    bottom: 100%;
+    width: 20rem;
+    border: 2px solid green;
+    background-color: #fff;
+    display: none;
+    .emoji-item {
+        display: inline-block;
+        border: 1px solid #f1f1f1;
+        padding: 0 .5rem;
     }
 }
 </style>

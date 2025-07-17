@@ -17,7 +17,7 @@ export default defineNuxtConfig({
             preprocessorOptions: {
                 scss: {
                     // additionalData: '@import "@/assets/styles/_variables.scss"',
-                    additionalData: '@import "@/assets/css/hurt.scss";',
+                    // additionalData: '$sass-quiet: true;@import "@/assets/css/hurt.scss";',
                 },
             },
         },
@@ -43,6 +43,7 @@ export default defineNuxtConfig({
     css: [
         'ress',
         '@/assets/css/main.scss',
+        '@/assets/css/hurt.scss',
         '@/assets/css/transitions.scss'
     ],
 })

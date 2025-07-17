@@ -1,6 +1,7 @@
 <template lang="pug">
 NWindow#video-view(width="70%", height="80%") 
     //- .content 
+    //- NFrame(src="https://tsukiseele.deno.dev/")
     NFrame(src="/blog")
     
 </template>
