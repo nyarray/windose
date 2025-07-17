@@ -26,9 +26,7 @@ logs
 
 # custom
 *.zip
-*.ttf
-*.woff
-*.woff2
+
 # yarn.lock
 
 _gitignore
